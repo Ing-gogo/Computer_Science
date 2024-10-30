@@ -26,7 +26,7 @@ int main()
 		}
 		printf("sum is: %d\n", sum);
 	}*/
-	{
+	/*{
 		int a, b;
 		int sum = 0;
 		printf("choose a number\n");
@@ -43,31 +43,34 @@ int main()
 			printf("The sum is odd and is: %d\n", sum);
 			}
 		}
-	}
+	}*/
 	{
 		int x;
 		int binary[32];
 		int index;
 		printf("enter decimal\n");
-		scanf("%d\n", &x);
+		scanf("%d", &x);
 
 		if (x == 0)
 		{
 			printf("Binary :0\n");
 		}
-		for (x > 0, x = x / 2)
+		for (; x > 0; x/=2)//teh first semicolon is for intialissation for works with 3 semicolons its a must
 		{
 			binary[index] = x % 2;
-			index;
+			index++;
 		}
 		 printf("Binary: ");
 		 for (int i = index - 1; i >= 0; i--) {
 			 printf("%d", binary[i]);
-    }
-    printf("\n");
+    		}
+    		printf("\n");
+    		return 0;
+	}
+	{
+		int a[column];
+		int b;
 
-    return 0;
-}
 	}
 
 }
