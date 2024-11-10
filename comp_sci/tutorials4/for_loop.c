@@ -68,9 +68,54 @@ int main()
     		return 0;
 	}
 	{
-		int a[column];
-		int b;
+		int a;
+		int b = 4;
+		for (a = 1; a <= b; a++)//tutorial 5 task
+			{
+				int start;
+				for (start = 2; start <= a; start++)
+					{
+						printf("%d, start");
+					}
+				printf("\n");
+			}
+		
+
+{
+    // Loop to print the pattern
+    for (int i = 2; i <= 5; i++) {
+        // Inner loop to print the number `i` repeated `i` times
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", i);
+        }
+        printf("\n");  // Move to the next line after each row
+    }
+    
+    return 0;
+}
+int num = 1;  // Start with number 1
+    
+    // Outer loop for the number of rows
+    for (int i = 1; i <= 4; i++) {
+        // Inner loop to print the numbers in each row
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", num);
+            num++;  // Increment the number after printing
+        }
+        printf("\n");  // Move to the next line after each row
+    }
+    
+    return 0;
 
 	}
-
+{
+   char d[6];
+   char e[] = "today";
+   do 
+   {
+       printf("Enter password\n");//task 2.3 tutorial 5
+       scanf("%s",d);
+   }while(strcmp(d, e)!= 0);
+   printf("Password is ok\n");
+    return 0;
 }
