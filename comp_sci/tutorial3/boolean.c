@@ -38,7 +38,7 @@ int main()
 	int a = 4;
 	if (a > 1)/*The use of bool is to help print 1 or 0 indicating true or false if ut wasn't there only a could have been printed*/
 	{
-		bool resulting = a > 1;
+		bool resulting = a > 1;/*used inside kugirango ibe printed only if its true other wise yari no guprinting 0 ibaye ari false*/
 		printf("%d\n", resulting ? true : false);
 	}
 {
@@ -49,6 +49,10 @@ int main()
 	{
 		printf("number is positive\n");
 
+	}
+	else
+	{
+		printf("number is negagtive\n");
 	}
 {
 	/*int customer;
