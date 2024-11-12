@@ -96,7 +96,7 @@ int main()
 	if (strcmp(sound, "hauf")==0)
 	{
 		printf("Its a dog\n");
-	}
+	}//can continue using else if to also add other sounds
 }	
 {
 	float x, y;
