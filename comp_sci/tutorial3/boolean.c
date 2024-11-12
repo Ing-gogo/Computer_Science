@@ -58,7 +58,7 @@ int main()
 	/*int customer;
 	printf("Please enter  your age\n");
 	scanf("%d", &customer);
-	if (customer> 18)
+	if (customer>= 18)
 	{
 		printf("allowed to buy alcohol\n");
 	}*/
