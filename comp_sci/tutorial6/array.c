@@ -12,7 +12,7 @@ int main()
 
 	float array[]= {3.4, 3.1, 4.7, 3.7, 4.9};
 	printf("%.1f\n", array[15]);//taask 1.4 
-	return 0;*/
+	return 0;
 
 	float a[]= {3.4, 3.1, 4.7, 3.7, 4.9};
 	int i;
@@ -23,7 +23,15 @@ int main()
 		sum += a[i];
 		average = sum / 5;
 	}
-	printf("%.1f\n", average);
-	return 0;
+	printf("%.1f\n", average);//task 1.5
+	return 0;*/
+
+	float a[] = {3.4, 3.1, 4.7, 3.7, 4.2};
+	int i;
+	for (i = 0; i < 5; i++)
+	{
+		if (a[i] - a[i + 1] > 0 || a[i + 1] - a[i]);	
+	}
+	printf("%d\n", i);
 
 }
