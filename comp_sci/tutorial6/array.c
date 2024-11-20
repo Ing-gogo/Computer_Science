@@ -27,11 +27,14 @@ int main()
 	return 0;*/
 
 	float a[] = {3.4, 3.1, 4.7, 3.7, 4.2};
-	int i;
-	for (i = 0; i < 5; i++)
+	int max_index = 0;
+	for (int i =  1; i < 5; i++) 
 	{
-		if (a[i] - a[i + 1] > 0 || a[i + 1] - a[i]);	
+		if (a[i] > a[max_index]){
+		max_index = i;
+		}
 	}
-	printf("%d\n", i);
+	printf("%d\n", max_index);
+	return 0;
 
 }
