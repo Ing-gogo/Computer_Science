@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
@@ -106,4 +107,63 @@ char tutorial2[] = {'C', 'S', '1', '\0'};//necessary to add the null character o
     {
         printf("different\n");
     }//task 4.7
+
+    //task5
+     char x[100]="CS1";
+    char y[]= "work";
+    strcat(x, y);
+    int n = strlen(x);
+    for(int i = 0; i < n ; i++){
+        printf("%c", x[i]);
+    }
+    strcpy(x, z);
+    //concacenating make sure that the array has enough space to prevent overflow. task 5.2
+    char x[100]="CS1";
+    char *result = strchr(x, '1');
+    if (result != NULL){
+        printf("1 is found at %ld\n", result -x);
+    }
+    else
+    {
+        printf("1 isn't found\n");
+    }//task to find a certain character in a string ld is used because it was an address.
+     char x[100]="CS1";
+    char y[]= "work";
+    strcat(x, y);
+    int n = strlen(x);
+    for(int i = 0; i < n ; i++){
+        printf("%c", x[i]);
+    }
+    printf("\n");
+    char z[100];
+    strcpy(z, x);
+    for(int a = 0; a < n ; a++){
+        printf("%c", z[a]);
+    }//task 5.3 note that strcpy copies from s2 to s1 strcpy(s1, s2)
+    //task6
+     float x[2][3] = {{1.0,2.0,3.0},
+                    {4.0,5.0,6.0}};
+    for(int i = 0; i < 2; i++){
+        for (int j = 0; j < 3; j++){
+            printf("%.1f ", x[i][j] * x[i][j]);//added to print the squares of the numbers.
+        }
+        printf("\n");
+    }//multidimensional array.Note: if you want to print only limited numbers you can use j <= i.
+   //task 7
+    int arr[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 10}; // Array with one missing element
+    int expected_sum = 55;  // Sum of numbers from 0 to 10 (10 * 11 / 2)
+    int actual_sum = 0;
+
+    // Calculate the sum of elements in the array
+    for (int i = 0; i < 10; i++) {
+        actual_sum += arr[i];
+    }
+
+    // The missing number is the difference between the expected sum and the actual sum
+    int missing_number = expected_sum - actual_sum;
+
+    printf("The missing number is: %d\n", missing_number);
+
+    return 0;
+
 }
