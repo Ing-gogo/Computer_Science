@@ -103,3 +103,72 @@ int main()
         
     }
 }
+
+#define ARRAY_SIZE(array) (sizeof(array) / sizeof(array[0]))
+
+int main(){
+    int arr[] = {1,2,3,4,5};
+    int result = ARRAY_SIZE(arr);
+    printf("%d\n", result);
+
+}//task 3.5
+//task 4.2
+void square(int x[], int size){
+    
+    for(int i = 1; i <= size; i++){
+        x[i] = pow(i, 2);
+    }
+   
+}
+
+int main(){
+     int n;
+    printf("enter number\n");
+    scanf("%d", &n);
+    int* arr = (int*)malloc(sizeof(int) * n);
+    for(int i = 1; i <= n; i++){
+        arr[i] = i;
+    }
+    square(arr, n);
+    for(int i = 1; i <= n; i++){
+    printf("%d ", arr[i]);
+    }
+}
+//task 4.3
+#include <stdio.h>
+#include <math.h>  // Include math.h for pow()
+
+void square(int x[], int size) {
+    for(int i = 0; i < size; i++) {
+        x[i] = pow(i, 2);  // Accessing elements using array subscript notation
+    }
+}
+
+int main() {
+    int n;
+
+    // Read the size of the array from user input
+    printf("Enter number n: ");
+    scanf("%d", &n);
+
+    // Declare the array with the size n
+    int arr[n];  
+
+    // Fill the array with values 0, 1, 2, ..., n-1
+    for(int i = 0; i < n; i++) {
+        arr[i] = i;  // Using array subscript notation
+    }
+
+    // Call the square function to square each element of the array
+    square(arr, n);
+
+    // Print the squared values
+    printf("Squared values: ");
+    for(int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);  // Using array subscript notation
+    }
+    printf("\n");
+
+    return 0;
+}
+
