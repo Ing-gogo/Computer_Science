@@ -2,9 +2,9 @@ int main()
 {
     int a = 23;
     int *a_ptr = &a;
-    printf("%d\n", *a_ptr);
-    (*a_ptr)++;//to change the value pointed to.
-    printf("%d\n", *a_ptr);
+    printf("%d\n", *a_ptr);   printf("%p\n", a_ptr);
+    (*a_ptr)++;/*to change the value pointed to*/.  a_ptr++;//incrementing the adddress of the pointer
+    printf("%d\n", *a_ptr);  printf("%p\n", a_ptr)//incremented by 4 because it is ann integer.
 
     char g;
     g = 'G';
@@ -16,6 +16,10 @@ int main()
     int arr[] = {1,2,3,4,5};
     //printf("%p\n", arr);prints the address 
     printf("%d\n", *arr);//this prints the first element of the array.
+int arr[] = {1,2,3};
+    for (int i = 0; i < 3; i++){
+        printf("%p\n", &arr[i]);
+    }//consecutively prints the address of all the elements of the array.
 
     int arr[] = {1,2,3,4,5};
     //printf("%p\n", arr);
@@ -88,4 +92,37 @@ void main()
     (**x_d_ptr)++;
     printf("%d", **x_d_ptr);//task 6.2 .
 }
+
+int n;
+    printf("Enter n\n");
+    scanf("%d", &n);
+    int *arr = malloc(sizeof(int )* n);
+    if (arr == NULL){
+        return 1;
+    } 
+    
+    for(int i = 0; i < n; i++){
+        printf("Enter numbers\n");
+        scanf("%d", &arr[i]);
+    }
+    for (int i = 0; i < n; i++){
+        printf("%d", arr[i]);
+    }
+    printf("\n");
+    int x = sizeof(arr);
+    printf("%d\n", x);
+    
+    free(arr);//dynamic array
+
+int arr[] = {1,2,3};
+    for (int i = 0; i < 3; i++){
+        printf("%d", *(arr + i));
+    }//task 3.1
+ int arr[][2] = {{1,2},{3,4}};
+    for(int i = 0; i < 2; i++){
+        for(int j = 0; j < 2; j++){
+            printf("%d", *(*(arr + i) + j));
+        }
+    }//task 3.2 accessing elements of a multidimensional array rememner to put the size of the column
+
 
