@@ -171,4 +171,43 @@ int main() {
 
     return 0;
 }
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int size;
+
+    // Prompt the user to enter the size of the array
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+
+    if (size <= 0) {
+        printf("Invalid size. Please enter a positive integer.\n");
+        return 1;
+    }
+
+    int *array = (int *)malloc(size * sizeof(int)); // Dynamically allocate memory for the array
+
+    if (array == NULL) {
+        printf("Memory allocation failed.\n");
+        return 1;
+    }
+
+    // Fill the array with squares of indices
+    for (int i = 0; i < size; i++) {
+        array[i] = (i + 1) * (i + 1);
+    }
+
+    // Print the array elements
+    printf("Array elements: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    free(array); // Free the dynamically allocated memory
+
+    return 0;
+}
+
 
