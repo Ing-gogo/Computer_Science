@@ -91,7 +91,7 @@ char tutorial[] = "CS1";
 
     char tutorial[] = "CS1";
     int n = sizeof(tutorial);
-    printf("%d", n);//prints 4 because tutorial is an array of characters.
+    printf("%d", n);//prints 4 because tutorial is an array of characters with a null character.
 char tutorial[] = "CS1";
     int n;
     for (int i = 0; i < 3; i++){
@@ -109,7 +109,7 @@ char tutorial2[] = {'C', 'S', '1', '\0'};//necessary to add the null character o
     }//task 4.7
 
     //task5
-     char x[100]="CS1";
+     char x[]="CS1";
     char y[]= "work";
     strcat(x, y);
     int n = strlen(x);
