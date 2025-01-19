@@ -1,0 +1,32 @@
+double square_root(double num, double epsilon){
+    if(num < 0){
+        return -1;
+    }
+    double x = num/2;
+    double next_x ;
+    do{
+    next_x = 0.5 * (x + num/x);
+    if(fabs(next_x - x) < epsilon){
+      return next_x;  
+    }
+    else{
+    
+    x = next_x;
+    }
+    } while (1);
+    
+}
+
+int main()
+{
+   double y;
+    double eps = 0.01;
+    printf("enter number\n");
+    scanf("%lf", &y);
+   double result = square_root(y,eps);
+  
+    printf("%.1lf", result);
+   
+
+    return 0;
+}
